@@ -3,7 +3,18 @@
 Repositorio de JavaScript, el cual servirá para aprender el lenguaje en profundidad.
 
 <h2>Que es JavaScript</h2>
-<p> JavaScript es un lenguaje de programación ampliamente utilizado en el desarrollo web. Fue creado originalmente por Netscape y se ha convertido en un estándar de la industria para la creación de páginas web dinámicas e interactivas. A menudo se utiliza en conjunto con HTML y CSS para agregar funcionalidad y mejorar la experiencia del usuario en los sitios web.</p>
+<p> JavaScript (JS) es un lenguaje de programación ligero, interpretado, o compilado justo-a-tiempo (just-in-time) con funciones de primera clase. Si bien es más conocido como un lenguaje de scripting (secuencias de comandos) para páginas web, y es usado en muchos entornos fuera del navegador, tal como Node.js, Apache CouchDB y Adobe Acrobat JavaScript es un lenguaje de programación basada en prototipos, multiparadigma, de un solo hilo, dinámico, con soporte para programación orientada a objetos, imperativa y declarativa (por ejemplo programación funcional). Lee más en acerca de JavaScript.</p>
+
+<h3>API</h3>
+<p>Cuando se habla de JS es imporante también entender las APIs. Una API, que significa Interfaz de Programación de Aplicaciones (Application Programming Interface en inglés), es un conjunto de reglas y herramientas que permiten que diferentes aplicaciones se comuniquen entre sí. En términos más simples, una API define cómo interactuar con un sistema de software, proporcionando una interfaz estandarizada que permite a los desarrolladores acceder y utilizar las funcionalidades de un servicio o aplicación sin necesidad de conocer los detalles internos de su implementación.</p>
+<ul>
+    <li>APIs de biblioteca o librería: Son conjuntos de funciones y métodos que un programador puede utilizar para realizar tareas específicas en su código. Estas funciones se proporcionan como parte de una biblioteca de software y se invocan según sea necesario.</li>
+    <li> APIs basadas en web: Son interfaces que permiten la comunicación entre diferentes aplicaciones a través de Internet. Las APIs web suelen estar basadas en protocolos estándar como HTTP y utilizan formatos de intercambio de datos como JSON o XML para transmitir información entre los sistemas.</li>
+    <li> APIs de sistema operativo: Son interfaces que permiten a las aplicaciones acceder a funciones y servicios del sistema operativo subyacente, como la gestión de archivos, la red, los dispositivos de hardware, etc.</li>
+</ul>
+<p> Las APIs son fundamentales en el desarrollo de software moderno, ya que permiten la integración de diferentes sistemas y la reutilización de funcionalidades existentes sin necesidad de volver a implementarlas desde cero. Además, las APIs facilitan la colaboración entre desarrolladores y la creación de ecosistemas de aplicaciones interconectadas.</p>
+
+ideas para proyectos con apis: api de twitter, api de google maps
 
 <hr>
 <h3>Conceptos</h3>
