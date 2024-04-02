@@ -16,6 +16,17 @@ Repositorio de JavaScript, el cual servirá para aprender el lenguaje en profund
 
 ideas para proyectos con apis: api de twitter, api de google maps
 
+<h3>DOM</h3>
+<p>En el contexto de HTML, CSS y JavaScript, DOM significa "Document Object Model" (Modelo de Objetos del Documento). El DOM es una representación estructurada y jerárquica de un documento HTML que proporciona una interfaz programática para interactuar con los elementos del documento, como párrafos, encabezados, imágenes, formularios, etc.</p>
+<ul>
+    <li>Estructura de árbol: El DOM organiza los elementos HTML de un documento en una estructura de árbol, donde cada elemento se representa como un nodo en el árbol. Los nodos pueden ser elementos HTML, atributos, texto, comentarios, etc </li>
+    <li>Interacción programática: El DOM proporciona una interfaz para que los scripts (como JavaScript) accedan, manipulen y actualicen los elementos y contenido de un documento HTML dinámicamente. Esto significa que los desarrolladores pueden escribir código para agregar, eliminar, modificar y mover elementos en la página web.</li>
+    <li>Representación neutra del documento: A través del DOM, el contenido del documento HTML se convierte en una estructura de objetos que puede ser manipulada independientemente de cómo se haya generado originalmente el documento. Esto significa que el DOM permite separar la estructura del contenido de su presentación y comportamiento, lo que facilita la manipulación dinámica del contenido.</li>
+    <li>Acceso a través de JavaScript: Los navegadores web proporcionan una implementación del DOM que está disponible para ser utilizada por JavaScript. Los desarrolladores pueden acceder al DOM utilizando métodos y propiedades proporcionados por el navegador para interactuar con los elementos HTML y aplicar estilos CSS dinámicamente, así como para responder a eventos del usuario.</li>
+</ul>
+<p>En resumen, el DOM es una representación programática del contenido y la estructura de un documento HTML que permite la interacción dinámica con los elementos de la página web utilizando JavaScript u otros lenguajes de programación. Es una parte fundamental del desarrollo web moderno y es utilizado extensamente para crear páginas web dinámicas e interactivas.</p>
+
+
 <hr>
 <h3>Conceptos</h3>
 <h4>Refactorizar</h4>
