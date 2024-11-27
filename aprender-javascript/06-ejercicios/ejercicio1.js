@@ -17,10 +17,10 @@ let horas = 1; // Cuanto se demorará???
 
 let viaje_tierra_a_luna = Math.round((distancia_a_luna / velocidad_nave));
 console.warn("La Tierra se demoraría un total de: " + viaje_tierra_a_luna + " horas en llegar a la Luna");
-console.log(velocidad_nave * 4);
+// console.log(velocidad_nave * 4);
 
 
-let number = 20;
+/* let number = 20;
 let holl = 5;
 
 let mall = number / holl;
@@ -30,5 +30,5 @@ for (let i = 0; velocidad_nave >= distancia_a_luna; i++) {
     velocidad_nave += velocidad_nave;
   }
 
-  console.log(velocidad_nave);
+  console.log(velocidad_nave); */
   
