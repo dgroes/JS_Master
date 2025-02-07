@@ -1,0 +1,10 @@
+/* Clase .highlight para el ejercicio 3 */
+.highlight{
+    font-family: Courier New, monospace;
+    font-style: italic;
+}
+
+/* Clase .hidden para el ejercicio 5 */
+.hidden{
+    display: none;
+}
