@@ -1,13 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos en JS 🦇</title>
     <script src="main.js" defer></script>
 </head>
+
 <body>
     <h1>Eventos en JS 🦇</h1>
-    
+
+    <ul>
+
+        <li>
+            <p>Evento Click</p>
+            <button id="botoncito">
+                Hazme click 😎
+            </button>
+        </li>
+
+        <li>
+            <p>Evento doble click</p>
+            <button id="botonDoble">
+                Dame dos clicks 🙂
+            </button>
+        </li>
+
+        <li>
+            <p>Evento Mouse over</p>
+            <textarea name="" id="cajaTexto"
+            >Pasa por encima de 🖕
+           </textarea>
+        </li>
+
+        <li>
+            <p>Evento MouseOut y MouseMove</p>
+            <textarea name="" id="textoCaja">
+                Pasa por encima de 🐪
+           </textarea>
+        </li>
+
+        <li>
+            <p>Evento Keydown KeyUp y KeyPress</p>
+            <input type="text" id="campoTexto">
+        </li>
+
+        <li>
+            <p>Evento Submit, input, focus, blur y change</p>
+            <form action="" id="formulario">
+
+                <input type="text" placeholder="Nombre" id="nombre"> <br>
+
+                <input type="email" placeholder="Correo Electronico" id="email"><br>
+
+                <select name="" id="genero">
+                    <option value="masculino">Masculino</option>
+                    <option value="famenino">Femenino</option>
+                </select><br>
+                
+                <input type="submit" value="Enviar">
+            </form>
+        </li>
+
+        <br>
+        <li>
+            <p>Evento de Portapapeles 🧻 (Copy, Paste, Cut, ContextMenu)</p>
+            <input type="text" id="portapapeles" value="Texto Para Copiar">
+        </li>
+
+        <li>
+            <p>Dejar de esuchar click</p>
+            <button id="dejar">
+                Has click 💛
+            </button>
+        </li>
+
+        <li id="cajaPadre">
+            <p>Propagación de Eventos</p>
+            <button id="botonHijo">
+                 Hazme Click 💜
+            </button>
+        </li>
+
+    </ul>
+
 </body>
+
 </html>
