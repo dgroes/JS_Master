@@ -1,0 +1,39 @@
+html{
+    font-family: monospace;
+}
+
+body{
+    background-color: cadetblue;
+}
+
+.semaforo{
+    background-color: rgb(228, 119, 119);
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    
+    /* Centrar vertcalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Ajustar tamaño de texto */
+    font-size: 62px;
+
+    /* ajustar contador */
+    counter-reset: contador;
+}
+
+.amarillo {
+    background-color: rgb(218, 218, 143);
+}
+
+.verde {
+    background-color: rgb(150, 231, 150);
+}
+
+.boton{
+    margin: 0 auto;
+    
+}
