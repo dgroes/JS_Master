@@ -96,3 +96,10 @@ console.log(guitarraJson); // JSON
 let converido = JSON.parse(guitarraJson);
 console.log(converido);
 
+
+//Recorrer un objeto
+let caja  = document.querySelector("#datos");
+
+for(let clave in guitarra){
+    caja.innerHTML += `<p>${clave}: ${guitarra[clave]}</p>`;
+}
