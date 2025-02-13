@@ -1,47 +1,33 @@
-/* 
-SUPER EJERCICIO: Gestor de Contactos
-Descripción:
-Crea una aplicación web que te permita añadir, mostrar y eliminar tus contactos favoritos. Cada contacto debe incluir:
 
-Nombre
-Número de Teléfono
-Correo Electrónico
-Fecha de Creación (se establece automáticamente al guardar el contacto)
-Requisitos y Tareas:
+/* CARTA */
+.card__header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center; /* Opcional, para centrar verticalmente */
+    background-color: #f8e861;
+    color: black;
+    font-size: 20px;
+}
 
-Formulario de Entrada:
+.card_deleteButton{
+    /* background-color: #c52f21; */
+    background: transparent;
+    padding: 4px;
+    border: none;
+}
 
-Crea un formulario en HTML que permita al usuario ingresar el nombre, teléfono y correo electrónico.
-El formulario debe tener un botón para agregar el contacto.
-Guardar Contactos:
+.card_deleteButton:hover{
+    background-color: #e7d740;
+}
 
-Desarrolla una función que, al enviar el formulario, cree un objeto con los datos del contacto.
-Agrega automáticamente la fecha de creación (puedes formatearla usando new Date().toLocaleString()).
-Guarda el objeto en un array de contactos y almacena dicho array en localStorage.
-Mostrar Contactos:
 
-Implementa una función que recupere el array de contactos desde localStorage y los muestre en el DOM.
-En lugar de una tabla, muestra cada contacto en una "tarjeta" (por ejemplo, un <div> con estilo) que contenga:
-Nombre
-Teléfono
-Correo Electrónico
-Fecha de Creación
-Un botón de "Eliminar" para quitar ese contacto.
-Organiza las tarjetas en un contenedor con un diseño de grid o flex (para que se vean como un listado de tarjetas).
-Carga Automática:
+.carta-contactos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    
+}
 
-Asegúrate de que al cargar la página (por ejemplo, con el evento DOMContentLoaded), se muestren automáticamente los contactos almacenados en localStorage.
-Eliminar Contactos:
-
-Cada tarjeta debe tener un botón "Eliminar" que, al hacer clic, remueva ese contacto del array y actualice el localStorage y la vista en el DOM.
-Validaciones y Estilo:
-
-Realiza validaciones básicas en el formulario (por ejemplo, que el campo de nombre no esté vacío).
-Da estilos CSS a las tarjetas para que tengan un aspecto agradable y se adapten a diferentes tamaños de pantalla.
-Objetivo Final:
-Al final, tu aplicación deberá permitir al usuario:
-
-Agregar nuevos contactos mediante un formulario.
-Visualizar todos los contactos guardados en una vista de tarjetas.
-Eliminar cualquier contacto de la lista, actualizando el almacenamiento y la vista de forma dinámica.
-*/
+.carta-contactos .card:first{
+    background-color: red;
+}
