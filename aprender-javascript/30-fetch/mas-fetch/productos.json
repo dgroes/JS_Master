@@ -1,0 +1,17 @@
+[
+    { "id": 1, "nombre": "Laptop Gamer", "precio": 1200 },
+    { "id": 2, "nombre": "Mouse Inalámbrico", "precio": 35 },
+    { "id": 3, "nombre": "Teclado Mecánico", "precio": 80 },
+    { "id": 4, "nombre": "Monitor 24'' Full HD", "precio": 200 },
+    { "id": 5, "nombre": "Silla Ergonómica", "precio": 250 },
+    { "id": 6, "nombre": "Auriculares Bluetooth", "precio": 60 },
+    { "id": 7, "nombre": "Disco SSD 1TB", "precio": 150 },
+    { "id": 8, "nombre": "Memoria RAM 16GB", "precio": 90 },
+    { "id": 9, "nombre": "Tarjeta Gráfica RTX 4060", "precio": 500 },
+    { "id": 10, "nombre": "Fuente de Poder 750W", "precio": 120 },
+    { "id": 11, "nombre": "Micrófono USB", "precio": 70 },
+    { "id": 12, "nombre": "Webcam 1080p", "precio": 55 },
+    { "id": 13, "nombre": "Router WiFi 6", "precio": 130 },
+    { "id": 14, "nombre": "Impresora Multifuncional", "precio": 180 },
+    { "id": 15, "nombre": "Tablet Android 10''", "precio": 300 }
+]
