@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMDb API / Ejercicio</title>
+    <title>Captura un Pokémon </title>
     <script src="main.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.yellow.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <body>
+        <main class="container-fluid">
+            <section>
+                <p>pikachu</p>
+                <form id="formulario"> <!-- ID corregido -->
+                    <fieldset role="group">
+                        <input type="text" id="pokemon-name" placeholder="Ingresa un Pokémon">
+                        <button id="buscar" type="button">Buscar</button> <!-- Cambiado a <button> -->
+                    </fieldset>
+                </form>
     
+                <button id="guardar" type="button">Guardar Pokémon</button> <!-- Botón de guardar separado -->
+    
+                <div id="resultado"></div>
+    
+                <h2>Pokémon Guardados</h2>
+                <ul id="pokemon-list"></ul>
+            </section>
+    
+            <section class="cards"></section>
+        </main>
+    </body>
+    
+
 </body>
+
 </html>
