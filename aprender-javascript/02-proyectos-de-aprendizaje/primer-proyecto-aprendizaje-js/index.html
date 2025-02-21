@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/main.js" defer></script>
+    <link href="fonts/fontawesome-free-6.1.2-web/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Proyecto JS de practica</title>
+</head>
+
+<body>
+
+    <!-- ___Main Principal__ -->
+    <div class="layout">
+
+        <!-- HEADER -->
+        <header class="layout__header">
+
+            <div class="header__logo">
+                <h1 class="logo__text">Proyecto JS 🙂</h1>
+            </div>
+
+            <!-- Nav -->
+            <nav class="header__nav">
+
+                <!-- Incicio -->
+                <ul class="nav__list">
+                    <li class="list__item">
+                        <a href="index.html" class="list__link">Inicio</a>
+                    </li>
+                </ul>
+
+                <!-- Reloj -->
+                <ul class="nav__list">
+                    <li class="list__item">
+                        <a href="reloj.html" class="list__link">Reloj</a>
+                    </li>
+                </ul>
+
+                <!-- Sobre mi -->
+                <ul class="nav__list">
+                    <li class="list__item">
+                        <a href="sobre-mi.html" class="list__link">Sobre Mi</a>
+                    </li>
+                </ul>
+
+                <!-- Contacto -->
+                <ul class="nav__list">
+                    <li class="list__item">
+                        <a href="contacto.html" class="list__link">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <!-- SLIDER DE IMAGENES -->
+        <section class="layout__slider">
+
+            <!-- Boton izquierda -->
+            <button class="slider__btn-prev">
+                <i class="slider__icon fa-solid fa-caret-left"></i>
+            </button>
+
+            <!-- Slides -->
+            <div class="slider__slides">
+
+                <!-- Hojas: Primer Slide -->
+                <articles class="slides__item slides__item--active">
+                    <img src="img/hojas.jpg" alt="hojas" class="slides__img">
+                </articles>
+
+                <!-- Cielo: Segundo Slide -->
+                <articles class="slides__item">
+                    <img src="img/cielo.jpg" alt="hojas" class="slides__img">
+                </articles>
+
+                <!-- Rojo: Tercer Slide -->
+                <articles class="slides__item">
+                    <img src="img/rojo.jpg" alt="hojas" class="slides__img">
+                </articles>
+
+            </div>
+
+            <!-- Boton Derecha -->
+            <button class="slider__btn-next">
+                <i class="slider__icon fa-solid fa-caret-right"></i>
+            </button>
+            
+        </section>
+
+
+        <main class="layout__articles"></main>
+
+        <!-- ASIDE -->
+        <aside class="layout__aside"></aside>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p class="footer__text">Todos los derechos reservados a <a href="https://github.com/dgroes">dgroes</a> &copy;
+        </p>
+        <p class="footer__top">Ir Arriba</p>
+    </footer>
+
+    <!-- THEMES -->
+    <div class="themes">
+        <div class="theme__green"></div>
+        <div class="theme__red"></div>
+        <div class="theme__blue"></div>
+    </div>
+
+</body>
+
+</html>
