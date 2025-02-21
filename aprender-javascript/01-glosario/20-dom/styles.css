@@ -1,0 +1,28 @@
+.cajita {
+    background: yellow;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 8px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+
+.articuloBase {
+    border: 1px solid;
+    margin: 20px;
+    padding: 8px;
+}
+
+.articuloVerde{
+    background-color: rgb(0, 255, 98);
+    color: black;
+    font-weight: bold;
+}  
+
+.articuloNegro{
+    background-color: rgb(32, 31, 31);
+    color: rgb(222, 228, 195);
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 28px;
+}
