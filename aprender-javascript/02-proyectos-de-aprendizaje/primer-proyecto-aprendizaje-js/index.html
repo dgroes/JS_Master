@@ -8,6 +8,7 @@
     <link href="fonts/fontawesome-free-6.1.2-web/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Proyecto JS de practica</title>
 </head>
 
@@ -26,34 +27,25 @@
             <!-- Nav -->
             <nav class="header__nav">
 
-                <!-- Incicio -->
                 <ul class="nav__list">
+
                     <li class="list__item">
                         <a href="index.html" class="list__link">Inicio</a>
                     </li>
-                </ul>
-
-                <!-- Reloj -->
-                <ul class="nav__list">
                     <li class="list__item">
                         <a href="reloj.html" class="list__link">Reloj</a>
                     </li>
-                </ul>
-
-                <!-- Sobre mi -->
-                <ul class="nav__list">
                     <li class="list__item">
                         <a href="sobre-mi.html" class="list__link">Sobre Mi</a>
                     </li>
-                </ul>
-
-                <!-- Contacto -->
-                <ul class="nav__list">
                     <li class="list__item">
                         <a href="contacto.html" class="list__link">Contacto</a>
                     </li>
+
                 </ul>
+
             </nav>
+
         </header>
 
 
@@ -89,14 +81,131 @@
             <button class="slider__btn-next">
                 <i class="slider__icon fa-solid fa-caret-right"></i>
             </button>
-            
+
         </section>
 
 
-        <main class="layout__articles"></main>
+        <main class="layout__articles">
+
+            <!-- Articulo #01 -->
+            <article class="articles__article">
+                <h3 class="articles__title">Articulo de prueba 01</h3>
+                <span class="article__date">22/02/2025</span>
+                <p class="article__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae neque
+                    corrupti, dolorem animi, porro dignissimos asperiores consequatur quis quod magni veniam eveniet
+                    ipsum ut numquam, illum maiores ipsam eum nihil.</p>
+                <button class="article__btn">Leer Más</button>
+            </article>
+
+            <!-- Articulo #02 -->
+            <article class="articles__article">
+                <h3 class="articles__title">Articulo de prueba 02</h3>
+                <span class="article__date">23/02/2025</span>
+                <p class="article__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae neque
+                    corrupti, dolorem animi, porro dignissimos asperiores consequatur quis quod magni veniam eveniet
+                    ipsum ut numquam, illum maiores ipsam eum nihil.</p>
+                <button class="article__btn">Leer Más</button>
+            </article>
+
+            <!-- Articulo #03 -->
+            <article class="articles__article">
+                <h3 class="articles__title">Articulo de prueba 03</h3>
+                <span class="article__date">24/02/2025</span>
+                <p class="article__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae neque
+                    corrupti, dolorem animi, porro dignissimos asperiores consequatur quis quod magni veniam eveniet
+                    ipsum ut numquam, illum maiores ipsam eum nihil.</p>
+                <button class="article__btn">Leer Más</button>
+            </article>
+
+            <!-- Articulo #04 -->
+            <article class="articles__article">
+                <h3 class="articles__title">Articulo de prueba 04</h3>
+                <span class="article__date">25/02/2025</span>
+                <p class="article__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae neque
+                    corrupti, dolorem animi, porro dignissimos asperiores consequatur quis quod magni veniam eveniet
+                    ipsum ut numquam, illum maiores ipsam eum nihil.</p>
+                <button class="article__btn">Leer Más</button>
+            </article>
+
+            <!-- Articulo #05 -->
+            <article class="articles__article">
+                <h3 class="articles__title">Articulo de prueba 05</h3>
+                <span class="article__date">26/02/2025</span>
+                <p class="article__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae neque
+                    corrupti, dolorem animi, porro dignissimos asperiores consequatur quis quod magni veniam eveniet
+                    ipsum ut numquam, illum maiores ipsam eum nihil.</p>
+                <button class="article__btn">Leer Más</button>
+            </article>
+
+            <!-- Articulo #06 -->
+            <article class="articles__article">
+                <h3 class="articles__title">Articulo de prueba 06</h3>
+                <span class="article__date">27/02/2025</span>
+                <p class="article__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae neque
+                    corrupti, dolorem animi, porro dignissimos asperiores consequatur quis quod magni veniam eveniet
+                    ipsum ut numquam, illum maiores ipsam eum nihil.</p>
+                <button class="article__btn">Leer Más</button>
+            </article>
+
+        </main>
 
         <!-- ASIDE -->
-        <aside class="layout__aside"></aside>
+        <aside class="layout__aside">
+
+            <!-- Sección de ¿Quien Soy? -->
+            <header class="aside__header">
+
+                <div class="header__container-title">
+                    <h3 class="header__title">
+                        <span class="title__span">¿Quien Soy?</span>
+                    </h3>
+                </div>
+
+                <div class="header__container-img">
+                    <img src="img/caracol.jpg" alt="caracol" class="header__img">
+                </div>
+
+                <p class="header__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis numquam iure explicabo deleniti
+                    pariatur! Qui quas mollitia voluptatem, obcaecati ut consequatur nulla cum iste, eum eligendi rerum
+                    rem natus corporis.
+                </p>
+
+            </header>
+
+
+            <!-- Formulario de Login -->
+            <form action="" class="aside__login">
+
+                <div class="login__container-title">
+                    <h3 class="login__title">
+                        <span class="title__span">Identificate</span>
+                    </h3>
+                </div>
+
+                <!-- Campo Nombre -->
+                <div class="login__form-group">
+                    <label for="name" class="login__label">Nombre:</label>
+                    <input type="text" id="name" name="name" class="login__input" required>
+                </div>
+
+                <!-- Campo Email -->
+                <div class="login__form-group">
+                    <label for="email" class="login__label">Email:</label>
+                    <input type="email" id="email" name="email" class="login__input" required>
+                </div>
+
+                <!-- Campo Contraseña -->
+                <div class="login__form-group">
+                    <label for="pass" class="login__label">Contraseña:</label>
+                    <input type="password" id="pass" name="pass" class="login__input" required>
+                </div>
+
+                <input type="button" value="Entrar" class="login__submit">
+
+            </form>
+
+        </aside>
     </div>
 
     <!-- FOOTER -->
