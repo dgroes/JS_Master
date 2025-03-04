@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="fonts/fontawesome-free-6.1.2-web/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="js/main.js" defer></script>
+    <script src="js/login.js" defer></script>
+    <title>Proyecto JS de practica</title>
+</head>
+
+<body>
+
+    <!-- ___Main Principal__ -->
+    <div class="layout">
+
+        <!-- HEADER -->
+        <header class="layout__header">
+
+            <div class="header__logo">
+                <h1 class="logo__text">Proyecto JS 🙂</h1>
+            </div>
+
+            <!-- Nav -->
+            <nav class="header__nav">
+
+                <ul class="nav__list">
+
+                    <li class="list__item">
+                        <a href="index.html" class="list__link">Inicio</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="reloj.html" class="list__link">Reloj</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="sobre-mi.html" class="list__link">Sobre Mi</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="contacto.html" class="list__link">Contacto</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <main class="layout__main">
+
+            <!-- Aquí los articulo -->
+            <h2 class="main__title">Sobre Mi</h2>
+            <div class="main__accordion">
+                <article class="accordion__collapse accordion__collapse--open">
+                    <header class="collapse__header">
+
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <i class="fa-solid fa-chevron-up"></i>
+                        <p class="collapse__title">Quienes somos?</p>
+
+                    </header>
+
+                    <div class="collapse__body">
+                        <p class="collapse__text">
+                            The command line is both incredibly powerful and annoyingly hard to use.
+
+                            Master it and gain super-powers: from controlling your cloud systems, to manipulating
+                            local files and programs, writing quick workflows and more...it's a developer's
+                            swiss-army knife. <br> <br>
+
+                            Despite its power, it's a very hard tool to master. It has a notoriously steep learning
+                            curve - it doesn't work like other tools, nothing in it helps you learn how to use it
+                            well, it's very easy to make destructive mistakes, and so on.
+
+                            Many developers avoid it for these reasons. But for those who do learn how to use it
+                            well, they become much better at development and devops. Mastering the CLI lets you work
+                            faster with your existing tools, and increases their power because a keyboard driven,
+                            repl-style interface has many advantages over GUIs.
+
+                            At Warp, our goal is to re-create the command line as a modern app, making a more
+                            usable, humane and, ultimately, more powerful CLI for everyone.
+
+                            Check out this post from our founder Zach Lloyd on why he started Warp.
+
+
+                        </p>
+                    </div>
+                </article>
+
+                <article class="accordion__collapse accordion__collapse--open">
+                    <header class="collapse__header">
+
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <i class="fa-solid fa-chevron-up"></i>
+                        <p class="collapse__title">Nuestros servicios?</p>
+
+                    </header>
+
+                    <div class="collapse__body">
+                        <p class="collapse__text">
+                            This post introduces Warp, a new Rust-based terminal we have been working on over the
+                            past year. Warp keeps what's best about the terminal while making it more modern,
+                            accessible, and powerful for all developers.
+
+                            Why doesn’t the terminal work like the rest of your apps? Developer tools have evolved
+                            towards reusability, composability, and collaboration. Meanwhile, terminals are
+                            inherently single-user, linear, and ephemeral.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="accordion__collapse accordion__collapse--open">
+                    <header class="collapse__header">
+
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <i class="fa-solid fa-chevron-up"></i>
+                        <p class="collapse__title">Que dicen nuestros clientes</p>
+
+                    </header>
+
+                    <div class="collapse__body">
+                        <p class="collapse__text">
+                            Warp is a new high-performance terminal built entirely in Rust that makes you and your
+                            team more productive and the CLI easier to use. The input editor for commands is a full
+                            text-editor that supports selections, cursor positioning, and shortcuts like you are
+                            used to in other apps. Commands and their output are visually grouped into blocks, and
+                            existing shortcuts like up-arrow and ctrl-r have new visual menus to make them easier to
+                            use. <br> <br>
+
+                            In this article, I walk through how we built the foundation of Warp: the UI, blocks, and
+                            the input editor. Building this foundation ultimately helped us unblock even more
+                            exciting features that we’re launching in the coming months, like infinite history,
+                            real-time collaboration, and shared environment variables.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+        </main>
+
+        <!-- ASIDE -->
+        <aside class="layout__aside">
+
+            <!-- Sección de ¿Quien Soy? -->
+            <header class="aside__header">
+
+                <div class="header__container-title">
+                    <h3 class="header__title">
+                        <span class="title__span">¿Quien Soy?</span>
+                    </h3>
+                </div>
+
+                <div class="header__container-img">
+                    <img src="img/caracol.jpg" alt="caracol" class="header__img">
+                </div>
+
+                <p class="header__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis numquam iure explicabo deleniti
+                    pariatur! Qui quas mollitia voluptatem, obcaecati ut consequatur nulla cum iste, eum eligendi rerum
+                    rem natus corporis.
+                </p>
+
+            </header>
+
+
+            <!-- Formulario de Login -->
+            <form action="" class="aside__login">
+
+                <div class="login__container-title">
+                    <h3 class="login__title">
+                        <span class="title__span">Identificate</span>
+                    </h3>
+                </div>
+
+                <!-- Campo Nombre -->
+                <div class="login__form-group">
+                    <label for="name" class="login__label">Nombre:</label>
+                    <input type="text" id="name" name="name" class="login__input" required>
+                </div>
+
+                <!-- Campo Email -->
+                <div class="login__form-group">
+                    <label for="email" class="login__label">Email:</label>
+                    <input type="email" id="email" name="email" class="login__input" required>
+                </div>
+
+                <!-- Campo Contraseña -->
+                <div class="login__form-group">
+                    <label for="pass" class="login__label">Contraseña:</label>
+                    <input type="password" id="pass" name="pass" class="login__input" required>
+                </div>
+
+                <input type="submit" value="Entrar" class="login__submit">
+
+
+            </form>
+
+            <div class="aside__data aside__data--hide">
+                <p class="data__text">
+                    Bienvenido <span class="data__name"></span>
+                    <button class="data__logout">Cerrar Sesión</button>
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p class="footer__text">Todos los derechos reservados a <a href="https://github.com/dgroes">dgroes</a> &copy;
+        </p>
+        <p class="footer__top">Ir Arriba</p>
+    </footer>
+
+    <!-- THEMES -->
+    <div class="themes">
+        <div class="theme__green"></div>
+        <div class="theme__red"></div>
+        <div class="theme__blue"></div>
+    </div>
+
+</body>
+
+</html>
