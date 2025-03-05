@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="fonts/fontawesome-free-6.1.2-web/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="js/main.js" defer></script>
+    <script src="js/clock.js" defer></script>
+    <script src="js/login.js" defer></script>
+   
+    <title>Proyecto JS de practica</title>
+</head>
+
+<body>
+
+    <!-- ___Main Principal__ -->
+    <div class="layout">
+
+        <!-- HEADER -->
+        <header class="layout__header">
+
+            <div class="header__logo">
+                <h1 class="logo__text">Proyecto JS 🙂</h1>
+            </div>
+
+            <!-- Nav -->
+            <nav class="header__nav">
+
+                <ul class="nav__list">
+
+                    <li class="list__item">
+                        <a href="index.html" class="list__link">Inicio</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="reloj.html" class="list__link">Reloj</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="sobre-mi.html" class="list__link">Sobre Mi</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="contacto.html" class="list__link">Contacto</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <main class="layout__main">
+
+            <div class="main__clock">
+                <p class="clock__time">Cargando...</p>
+            </div>
+            
+        </main>
+
+        <!-- ASIDE -->
+        <aside class="layout__aside">
+
+            <!-- Sección de ¿Quien Soy? -->
+            <header class="aside__header">
+
+                <div class="header__container-title">
+                    <h3 class="header__title">
+                        <span class="title__span">¿Quien Soy?</span>
+                    </h3>
+                </div>
+
+                <div class="header__container-img">
+                    <img src="img/caracol.jpg" alt="caracol" class="header__img">
+                </div>
+
+                <p class="header__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis numquam iure explicabo deleniti
+                    pariatur! Qui quas mollitia voluptatem, obcaecati ut consequatur nulla cum iste, eum eligendi rerum
+                    rem natus corporis.
+                </p>
+
+            </header>
+
+
+            <!-- Formulario de Login -->
+            <form action="" class="aside__login">
+
+                <div class="login__container-title">
+                    <h3 class="login__title">
+                        <span class="title__span">Identificate</span>
+                    </h3>
+                </div>
+
+                <!-- Campo Nombre -->
+                <div class="login__form-group">
+                    <label for="name" class="login__label">Nombre:</label>
+                    <input type="text" id="name" name="name" class="login__input" required>
+                </div>
+
+                <!-- Campo Email -->
+                <div class="login__form-group">
+                    <label for="email" class="login__label">Email:</label>
+                    <input type="email" id="email" name="email" class="login__input" required>
+                </div>
+
+                <!-- Campo Contraseña -->
+                <div class="login__form-group">
+                    <label for="pass" class="login__label">Contraseña:</label>
+                    <input type="password" id="pass" name="pass" class="login__input" required>
+                </div>
+
+                <input type="submit" value="Entrar" class="login__submit">
+
+
+            </form>
+
+            <div class="aside__data aside__data--hide">
+                <p class="data__text">
+                    Bienvenido <span class="data__name"></span>
+                    <button class="data__logout">Cerrar Sesión</button>
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p class="footer__text">Todos los derechos reservados a <a href="https://github.com/dgroes">dgroes</a> &copy;
+        </p>
+        <p class="footer__top">Ir Arriba</p>
+    </footer>
+
+    <!-- THEMES -->
+    <div class="themes">
+        <div class="theme__green"></div>
+        <div class="theme__red"></div>
+        <div class="theme__blue"></div>
+    </div>
+
+</body>
+
+</html>
