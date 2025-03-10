@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Errores</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.yellow.min.css">
+</head>
+
+<body>
+    <main class="container-fluid">
+        <h1>Manejo de errores en JS ⚠️</h1>
+        <h3>Control de flujo y Manejo de errores</h3>
+        <article>
+            <p>El control de flujo en JavaScript define el orden en que se ejecutan las instrucciones. Esto puede
+                depender de estructuras como condicionales, bucles y excepciones.</p>
+            <h5>Ejemplo</h5>
+            <code>
+                Línea 01|  let nombre = "Pompompurin"; <br>
+                Línea 02|  console.log(nombre);
+            </code>
+            <p>En este caso, no hay ninguna estructura de control que altere el orden de ejecución.
+                Sin embargo, en el siguiente ejemplo, el flujo de ejecución cambia debido a una condición:</p>
+            <br>
+            <p>
+                En este caso el flujo nos indica que primero ejecute primero la línea 01 y luego la 02, en ese orden.
+                <br>
+                Esto es en base a la ejecución y no al orden del código, eso quiere decir por ejemplo:
+            </p>
+            <code>
+                if (3 > 3) {   <br>
+                    alert("Este mensaje nunca aparecerá");  <br>
+                }   <br>
+                console.log("El código sigue ejecutándose");
+                
+            </code>
+            <p>
+                Aquí, la condición 3 > 3 es falsa, por lo que el código dentro del if no se ejecuta. Sin embargo, el programa no se detiene, sino que continúa con las siguientes instrucciones, en este caso, ejecutando console.log("El código sigue ejecutándose");.
+            </p>
+
+        </article>
+
+
+    </main>
+
+</body>
+
+</html>
