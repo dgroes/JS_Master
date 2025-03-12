@@ -22,6 +22,8 @@ Se crean las vistas necesarias dentro de `resources/views/products/` y luego ser
 
 Dentro del controller de prodcuto definimos las rutas las cuales retornarán una vista, por ejemplo la function de index deberá retornar la view de index de productos.
 
+#### Creación de Seed
+Antes de seguir con la creación de las vistás, crearé seeds para tener usuarios por defecto ya registrados.
 
 #### Creación de plantilla para las vistas de Productos
 Se crea un fichero en `resources/views/layouts/`, `pro.blade.php` será la encargada de darle formato y estilo a las distintas vistas realacionadas a los productos. El fichero `app.blade.php` seguirá en uso para el dashboard del admin.
@@ -51,3 +53,8 @@ Entonces:
 - @yield('nombre_de_la_sección'): Define un espacio que puede ser llenado en una vista hija.
 - @section('nombre_de_la_sección'): Completa ese espacio con contenido en una vista hija.
 
+## C03: Seeders
+Con los seeders está la posibilidad de llenar la BD con datos utilizando clases de seed. Para generar un seeder, se ejecuta esta comando: `make:seeder`. En este caso se creó un seeder para usuario:
+`php artisan make:seeder UserSeeder`.
+
+Luego para ejecutar los seeder con artisan tiene que ser `db:seed`, por defecto este comando ejecuta la clase `Database\Seeders\DatabaseSeeder`, que a su ves puede invocar otra clases de siembra(otra clases de seeders). Pero si solo deseas ejecutar una clase en especifico será con el comando: `php artisan db:seed --class=UserSeeder`
