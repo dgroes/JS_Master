@@ -2,27 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\Sale;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class SaleController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $products = Product::all(); // Obtener todos los productos
-        return view('products.index', compact('products'));
+        //
     }
-
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        return view('products.create');
+        //
     }
 
     /**
@@ -36,24 +34,23 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Sale $sale)
     {
-        $product = Product::findOrFail($id);
-        return view('products.show', compact('product'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Sale $sale)
     {
-
+        //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Sale $sale)
     {
         //
     }
@@ -61,7 +58,7 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Sale $sale)
     {
         //
     }
