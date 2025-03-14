@@ -34,6 +34,11 @@ Actualmente la tabla sales no contempla agregar varios productos distintos en un
 Para permitir que una venta tenga varios productos distintos, la relación entre esas dos tablas tiene que ser de uno a muchos (una venta puede tenera varios productos) para lograr esto se eliminará el atrubuto `product_id` de `sales` y manejar los productos en `sales_detail`.
 
 
+### Establecer las relaciones entre modelos
+Importante luego de las migraciones es establecer las relaciones entre los modelos y establecer los valores que adminitrá el modelo, esto último con `$fillable`se puede establecer los valores que haceptará el modelo en su llenado de datos.
+
+
+
 
 # Commentarios extensos
 ## C00: Layaouts como Herencia de Plantillas
@@ -66,3 +71,22 @@ Luego para ejecutar los seeder con artisan tiene que ser `db:seed`, por defecto 
 ## C04: Cambio de migraciones
 Para poder modifiar migraciones ya realizadas, en el caso de la tabla `sales` se creó una nueva migración con el comando: `php artisan make:migration modify_sales_table`, dentro de la migración se hace uso de **dropColumn** eliminado la columna señalada, con el método **change** se puede mofificar el tipo de dato de una columna existente, sin emargo, esto depende del soporte del manejarod de BD. en este caso (uso de SQLite) tiene liminaticónes, aun así dropColumn y change funcionaron, pero se debe tener en cuenta que en algunos casos puede probocar errores. Tabmien se puede hacer uso de un Rollback
 
+
+## C05: Relacion con pivot
+El pivot en `withPivot('quantity', 'price')` se usa en relaciones muchos a muchos (**belongsToMany**) para agrega datos adicionales a la tabla intermedia.
+
+En este caso la relación entre **Product** y **Sale** se maneja mediante la tabla intermadia **sales_detailes**. La función `withPivot('quantity', 'price')` indica que además de los IDs (product_id, sale_id) queremos acceder a los campos adicionales **quantity** y **price** dentro de esta relación.
+
+#### El uso del pivot 
+Cuando se accese a los productos entro de una venta, se puede obtener información como en el siguiente 
+ejemplo:
+{
+
+    $sale = Sale::find(1);
+    foreach ($sale->products as $product) {
+        Cantidad: {$product->pivot->quantity}, Precio: {$product->pivot->price
+    }";
+    }
+}
+
+El uso de pivtot se usa en relaciones de belongsToMany donde hay na tabla intermedia que guarda la información extra sobre la relación. En este caso 
