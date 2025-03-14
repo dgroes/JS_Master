@@ -28,6 +28,10 @@ Antes de seguir con la creación de las vistás, crearé seeds para tener usuari
 #### Creación de plantilla para las vistas de Productos
 Se crea un fichero en `resources/views/layouts/`, `pro.blade.php` será la encargada de darle formato y estilo a las distintas vistas realacionadas a los productos. El fichero `app.blade.php` seguirá en uso para el dashboard del admin.
 
+### Concretar las migraciones y BD
+Actualmente la tabla sales no contempla agregar varios productos distintos en una misma venta. Al tener `producto_id` en la tabla **sales**, se asume que cada venta solo puede tener un solo producto. Es por eso que se crea la tabla `sales_details`.
+
+Para permitir que una venta tenga varios productos distintos, la relación entre esas dos tablas tiene que ser de uno a muchos (una venta puede tenera varios productos) para lograr esto se eliminará el atrubuto `product_id` de `sales` y manejar los productos en `sales_detail`.
 
 
 
@@ -58,3 +62,7 @@ Con los seeders está la posibilidad de llenar la BD con datos utilizando clases
 `php artisan make:seeder UserSeeder`.
 
 Luego para ejecutar los seeder con artisan tiene que ser `db:seed`, por defecto este comando ejecuta la clase `Database\Seeders\DatabaseSeeder`, que a su ves puede invocar otra clases de siembra(otra clases de seeders). Pero si solo deseas ejecutar una clase en especifico será con el comando: `php artisan db:seed --class=UserSeeder`
+
+## C04: Cambio de migraciones
+Para poder modifiar migraciones ya realizadas, en el caso de la tabla `sales` se creó una nueva migración con el comando: `php artisan make:migration modify_sales_table`, dentro de la migración se hace uso de **dropColumn** eliminado la columna señalada, con el método **change** se puede mofificar el tipo de dato de una columna existente, sin emargo, esto depende del soporte del manejarod de BD. en este caso (uso de SQLite) tiene liminaticónes, aun así dropColumn y change funcionaron, pero se debe tener en cuenta que en algunos casos puede probocar errores. Tabmien se puede hacer uso de un Rollback
+
