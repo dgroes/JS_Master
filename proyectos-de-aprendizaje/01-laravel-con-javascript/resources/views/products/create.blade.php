@@ -6,34 +6,35 @@
     <h1>Creación de producto</h1>
 
     <section>
-        <form>
+        <form  method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data">
+            @csrf
             <fieldset>
 
                 {{-- Nombre del producto --}}
                 <label>
                     Nombre del producto
-                    <input type="text" name="name" id="name" placeholder="Producto"/>
+                    <input type="text" name="name" id="name" placeholder="Producto" />
                 </label>
 
                 {{-- Descripción del producto --}}
                 <label>
                     Descripción del producto
-                    <input type="text" name="description" id="description" placeholder="Descripción"/>
+                    <input type="text" name="description" id="description" placeholder="Descripción" />
                 </label>
 
                 {{-- Precio del producto --}}
                 <label>Precio del producto
-                    <input type="number" name="price" id="price" placeholder="Precio"/>
+                    <input type="number" name="price" id="price" placeholder="Precio" />
                 </label>
 
                 {{-- Stock de producto --}}
                 <label>Stock del producto
-                    <input type="number" name="stock" id="stock" placeholder="Stock"/>
+                    <input type="number" name="stock" id="stock" placeholder="Stock" />
                 </label>
 
                 {{-- Imagen del producto --}}
                 <label>Imagen del producto
-                <input type="file" name="image" id="image">
+                    <input type="file" name="image" id="image">
                 </label>
 
             </fieldset>
