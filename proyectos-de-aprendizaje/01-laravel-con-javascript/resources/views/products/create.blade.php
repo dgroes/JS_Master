@@ -6,7 +6,7 @@
     <h1>Creación de producto</h1>
 
     <section>
-        <form  method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data">
             @csrf
             <fieldset>
 
@@ -34,7 +34,7 @@
 
                 {{-- Imagen del producto --}}
                 <label>Imagen del producto
-                    <input type="file" name="image" id="image">
+                    <input type="file" name="image" id="image" accept="image/*" />
                 </label>
 
             </fieldset>

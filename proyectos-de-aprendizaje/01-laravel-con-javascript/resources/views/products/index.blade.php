@@ -10,6 +10,11 @@
                 <li>
                     <a href="{{ route('products.show', $product->id) }}">{{ $product->name }}</a> - ${{ $product->price }}
                 </li>
+                {{-- C06: asset sin public --}}
+                <li>
+                    <img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->name }}" style="width: 100px;">
+                </li>
+
             @endforeach
 
         @else
