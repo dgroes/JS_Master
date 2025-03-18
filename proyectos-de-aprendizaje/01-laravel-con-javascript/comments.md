@@ -90,3 +90,7 @@ ejemplo:
 }
 
 El uso de pivtot se usa en relaciones de belongsToMany donde hay na tabla intermedia que guarda la información extra sobre la relación. En este caso 
+
+
+## C06: asset sin public
+Para poder accerder a la ruta de `public/images` con Laravel no es necesario incluir la ruta `public/`. Cuando utilizamos `asset('images/' . $product->image)` esto generará una URL correcta para acceder a la imagen almacenada en `public/images/`, sin la necesidad de especificar completamente la ruta.
