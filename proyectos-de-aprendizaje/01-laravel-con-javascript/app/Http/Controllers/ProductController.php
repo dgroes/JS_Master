@@ -30,9 +30,40 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //agregamos a la bd
-        Product::create($request->all());
-        return redirect()->route('products.index');
+
+        //Validaciones
+        // try {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'price' => 'required|numeric',
+            'stock' => 'required|integer',
+            'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
+        ]);
+        /*     dd($request->all()); // Esto solo se ejecutará si la validación pasa
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            dd($e->errors()); // Muestra los errores si la validación falla
+        } */
+
+
+        // Inicializamos un array con los datos del producto
+        $productData = $request->except('_token'); // Obtenemos todos los datos menos el token CSRF
+
+        // Manejo de la imagen (si es que se sube)
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $name = time() . '.' . $image->getClientOriginalExtension(); // Generamos un nombre único para la imagen
+            $destinationPath = public_path('/images');
+            $image->move($destinationPath, $name); // Mueve la imagen a la carpeta 'public/images'
+
+            // Ahora agregamos el nombre de la imagen al array de datos
+            $productData['image'] = $name;
+        }
+
+        // Guardar el producto en la base de datos
+        Product::create($productData); // Usamos el array con todos los datos, incluyendo la imagen
+
+        return redirect()->route('products.index')->with('success', 'Producto agregado correctamente');
     }
 
     /**
@@ -47,10 +78,7 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-
-    }
+    public function edit(string $id) {}
 
     /**
      * Update the specified resource in storage.
