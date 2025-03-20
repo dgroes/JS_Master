@@ -38,6 +38,17 @@ Para permitir que una venta tenga varios productos distintos, la relación entre
 Importante luego de las migraciones es establecer las relaciones entre los modelos y establecer los valores que adminitrá el modelo, esto último con `$fillable`se puede establecer los valores que haceptará el modelo en su llenado de datos.
 
 
+### Introducir JS en el código
+En Laravel con Vite, lo ideal es organizar JS en ficheros dentro de `resources/js/app.js`. Este es el fichero padre que hace uso y llamado del resto de nuestros comonentes JS que deseamos crear, por lo que dentro de este fichero importaremos nuestros componentes de JS, manteniendo así un orden
+
+Para importar un componente por ejemplo nuestro coponente que cambia el tema de nuestro proyecto, sería llamando a dicho fichero de esta forma: `import './theme';`. De esta forma funcionaría y `app.js` se encargará de llamar nuestros componentes.
+
+Tambien será importante hacer llamado de nuestros componentes JS en nuetro layout de productos por ejemplo. Entro de `layouts/pro.blade` en nuestra línea de `@vite` agreamos además del CSS nuestro JS de esta manera: `@vite(['resources/css/app.css', 'resources/js/app.js'])`.
+
+### Hero Icon
+Para agregarle algo más de diseño en algunas partes del proyecto, se hace uso de HeroIcons para una personalización más amplia,a demás de practicar el uso de iconos como componentes Laravel.
+
+
 
 
 # Commentarios extensos
@@ -94,3 +105,56 @@ El uso de pivtot se usa en relaciones de belongsToMany donde hay na tabla interm
 
 ## C06: asset sin public
 Para poder accerder a la ruta de `public/images` con Laravel no es necesario incluir la ruta `public/`. Cuando utilizamos `asset('images/' . $product->image)` esto generará una URL correcta para acceder a la imagen almacenada en `public/images/`, sin la necesidad de especificar completamente la ruta.
+
+
+## C07: Carga de CSS personalizado con Vite
+En el proyecto se hace uso de Pico CSS, pero para poder agregar CSS personalizado se deberá hacer de la siguiente forma
+
+Entro de `resources/css` está el fichero `app.css`, dentro del ficherop podrémos agregar todos los estilos personalizados para poder utilizar en las vistas. Para que esto funcione es nesesario en este caso del proyecto agregarlo dentro de nuestro layout para que por defecto se llame y se haga uso de ese fichero CSS. Entonces siguiendo con el ejemplo del proyecto, dentro del fichero de `resources\views\layouts\pro.blade.php` se agrega dentro de la etiqueta `<head>` la ruta para llamar al fihcero CSS.
+
+Además, para que esto funcione es importante hacer que corra **Vite** de la siguiente forma:
+`npm run dev`
+
+
+Con esto:
+- **Vite** carga `resources/css/app.css` y compila los estilos correctamente.
+- **Pico CSS** se carga desde un CDN para mantener la estructura base.
+- **Blade** `@yield('content')` permite que cada vista Blade inserte su contenido dentro del layout.
+
+### Importante
+dentod del fichero `resources/css/app.css` por defecto viene escrito: 
+- @tailwind base;
+- @tailwind components;
+- @tailwind utilities; 
+
+Esto hace que que Tailwind sobreescriba los estilos de Pico CSS porque su base redefine estilos globales como ecabezados, enlaces, márgenes, etc. Es por esto que al utilizar el fihcero e importarlo en el layout varios estilos propios de Pico CSS desaparezcan. 
+
+Una forma de resolver esto es quitar los estilos de Tailwind, pero estoy haría que las vistas en el proyecto que no utilicen Pico CSS como por ejemplo el register de Breeze los estilos no funcionen.
+
+Para solucionar este problema y evitar que Tailwind sobrescriba estilos, dentro del fichero `tailwind.config.js` con esto:
+
+`module.exports = {
+  corePlugins: {
+    preflight: false, // Evita que Tailwind sobrescriba los estilos base
+  },
+}
+`
+
+Esto desactiva la normlaización de estilos de Tailwind (preflight), Así, Tailwind solo aporta utilidades y no toca los estilos base de Pico CSS.
+Después de hacer este cambio, recuerda recompilar Tailwind para que tome la nueva configuración:
+`npm run build`
+
+## C08: JS con Laravel
+En Laravel con Vite, lo ideal es organizar JS en ficheros dentro de `resources/js/app.js`. Este es el fichero padre que hace uso y llamado del resto de nuestros comonentes JS que deseamos crear, por lo que dentro de este fichero importaremos nuestros componentes de JS, manteniendo así un orden
+
+Para importar un componente por ejemplo nuestro coponente que cambia el tema de nuestro proyecto, sería llamando a dicho fichero de esta forma: `import './theme';`. De esta forma funcionaría y `app.js` se encargará de llamar nuestros componentes.
+
+Tambien será importante hacer llamado de nuestros componentes JS en nuetro layout de productos por ejemplo. Entro de `layouts/pro.blade` en nuestra línea de `@vite` agreamos además del CSS nuestro JS de esta manera: `@vite(['resources/css/app.css', 'resources/js/app.js'])`.
+
+## C09: Icono como Componente
+Los iconos de **Hero Icons** sin etiquetas demasiado largas para mi gusto, es por eso que se decidió de trabajarlas como componentes. Para ello por ejemplo se agregó un icon de un corazón, se introduce el `svg` completo entro de un fuchero creado dentro de `resources\views\components\icons`, por lo que la ruta de nuestro icono de corazón sería: `resources\views\components\icons\heart.blade.php`.
+
+No solo pegar el `svg` basta para su implementación. Cuando se crea un componente de **Blade**, puedo permitir que se pasen atributos **HTML** adicionales usando la directiva `{{ $attributes }}`. Esto permitirá añadir **id**, **class**, **data-**, o cualquier otro atrivuto cuando se utilice el componente.
+
+Esto además ayuda a la manipulación del componente con JS, para el icono de modod oscuro y claro se hace más practico el uso de `{{ $attributes }}`. 
+
