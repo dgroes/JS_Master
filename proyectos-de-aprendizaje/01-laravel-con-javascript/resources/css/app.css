@@ -1,3 +1,17 @@
-@tailwind base;
+@import url('https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.yellow.min.css');
+
+/* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
+
+/* Tus estilos personalizados */
+
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+:root {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}

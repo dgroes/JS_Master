@@ -18,4 +18,8 @@ export default {
     },
 
     plugins: [forms],
+
+    corePlugins: {
+        preflight: false, // Evita que Tailwind sobrescriba los estilos base de Pico CSS
+    },
 };
