@@ -5,8 +5,8 @@
 @section('content') {{-- C02: Yield con Section --}}
     <h2>Lista de Productos
     </h2>
-    <table  class="striped">
-        <thead data-theme="light">
+    <table>
+        <thead>
             <tr>
                 <th scope="col">Producto </th>
                 <th scope="col">Descripción</th>
@@ -21,7 +21,7 @@
                 @foreach ($products as $product)
                     <tr>
                         <td><a href="{{ route('products.show', $product->id) }}">{{ $product->name }}</a></td>
-                        <td>{{ $product->description }}</td>
+                        <td>{{ Str::limit($product->description, 80) }}</td>
                         <td>${{ $product->price }}</td>
                         <td>{{ $product->stock }}</td>
                         <td>
@@ -29,12 +29,12 @@
                                 style="width: 100px;">
                         </td>
                         <td>
-                            <a href="{{ route('products.edit', $product->id) }}">✏️</a> |
+                            <a href="#" class="btn-edit" data-id="{{ $product->id }}"> <x-icons.edit/> </a>
                             <form action="{{ route('products.destroy', $product->id) }}" method="POST"
                                 style="display:inline;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" style="background:none; border:none; cursor:pointer;">🗑️</button>
+                                <button type="submit" style="background:none; border:none; cursor:pointer;"> <x-icons.trash/> </button>
                             </form>
                         </td>
                     </tr>
@@ -46,5 +46,37 @@
             @endif
         </tbody>
     </table>
+
+    <!-- Modal -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-body">
+            <!-- Aquí se cargará el contenido de la vista de edición dinámicamente -->
+        </div>
+    </div>
+</div>
+
+
+
+<dialog>
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev"></button>
+        <p>
+          <strong>🗓️ Thank You for Registering!</strong>
+        </p>
+      </header>
+      <p>
+        We're excited to have you join us for our
+        upcoming event. Please arrive at the museum
+        on time to check in and get started.
+      </p>
+      <ul>
+        <li>Date: Saturday, April 15</li>
+        <li>Time: 10:00am - 12:00pm</li>
+      </ul>
+    </article>
+  </dialog>
 
 @endsection
