@@ -1,5 +1,5 @@
 <!doctype html> {{-- C00: Layaouts como Herencia de Plantillas --}}
-<html lang="es" data-theme="light">
+<html lang="es" data-theme="{{ $_COOKIE['theme'] ?? 'light' }}">
 
 <head>
     <meta charset="utf-8">
@@ -10,6 +10,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.yellow.min.css">
 
     <title>@yield('title', 'Mi Aplicación')</title> {{-- C02: Yield con Section --}}
+
+
+    {{-- Script para cargar el tema antes de que la página se renderice --}}
+    <script>
+        (function() {
+            // Obtiene el tema guardado en el localStorage
+            const temaGuardado = localStorage.getItem('theme');
+            if (temaGuardado) {
+                // Aplica el tema guardado
+                document.documentElement.setAttribute('data-theme', JSON.parse(temaGuardado));
+            } else {
+                // Aplica el tema por defecto (light)
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
 
     {{-- C08: JS con Laravel --}}
     {{-- C07: Carga de CSS personalizado con Vite --}}
@@ -31,8 +47,8 @@
                 <li><a href="{{ route('products.index') }}">Productos</a></li>
                 <li><a href="{{ route('products.create') }}">Nuevo Producto</a></li>
                 <li id="theme-toggle" class="cursor-pointer">
-                    <x-icons.sun id="light" />
-                    <x-icons.moon id="dark" />
+                    <x-icons.sun id="toggle-light" />
+                    <x-icons.moon id="toggle-dark" />
                 </li>
 
 
